@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Example: You Tried</title>
+</head>
+
+<body>
+    <h1 id="youTyped"> You typed ______</h1>
+    <script type="text/javascript">
+
+// function test() {
+//     var current = document.getElementById('youTyped');
+//     var newHeading = window.prompt("Please write your new Heading");
+//     current.innerHTML = newHeading;
+// }
+// setInterval(test, 500);
+
+        function changeHeader(){
+            var headText = document.getElementById('youTyped');
+            var newText = window.prompt("Enter a string");
+            headText.innerHTML = newText;
+        }
+        setInterval(changeHeader, 500);
+
+    </script>
+</body>
+
+</html>
+
+<!-- function test() {
+    var current = document.getElementById('youTyped');
+    var newHeading = window.prompt("Please write your new Heading");
+    current.innerHTML = newHeading;
+}
+setInterval(test, 500); -->
+
+
+<!-- function changeHeader(){
+    let headText= document.getElementByID("youTyped");
+    let newText= window.prompt("Enter a string");
+    headText.innerHTML= newText;
+}
+
+setInterval(changeHeader, 500) -->
