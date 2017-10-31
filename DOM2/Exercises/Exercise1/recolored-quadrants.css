@@ -1,0 +1,10 @@
+#topLeft, #topRight, #bottomLeft, #bottomRight {
+    border: 1px solid black ;   
+    float: left;
+    width:49%;
+    height:150px 
+    
+}
+
+
+
