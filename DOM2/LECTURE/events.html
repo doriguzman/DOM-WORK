@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>mouseClick</title>
+
+    </head>
+<div id = "coords">
+  
+    
+    </div>
+
+<script type="text/javascript">
+
+document.addEventListener("DOMContentLoaded",function(event){
+    document.addEventListener("mousemove",function(event){
+         var div = document.getElementById("coords")
+         div.innerText = "X coordinate is: " + event.clientX  + " Y coordinate is: " + event.clientY
+    })
+ })
+
+
+</script>
+
+
+
+</html>
