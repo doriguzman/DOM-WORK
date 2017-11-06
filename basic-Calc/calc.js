@@ -25,18 +25,23 @@ function calculate(mathExp) {
 document.addEventListener('DOMContentLoaded', function () {
   outputDiv = document.getElementById('output');
 
-  document.addEventListener('click', function (event) {
+  document.addEventListener('click', function(event) {
     var elementId = event.target.innerText;
     outputDiv.innerText += elementId;
     var expression = outputDiv.innerText;
+    var lastCharacter= expression[expression.length-1]
     //checking if the last element is equal sign 
-    console.log(elementId)
-    // if (numbers.includes(event.target.innerText){
-    //   Number(outputDiv.innerText)
-    // })
-    if (elementId === '=' && expression.length > 0) {
-    outputDiv.innerText = calculate(expression)
+    // console.log(elementId)
+  
+    if (lastCharacter === "=" ) {
+      var evaluate= expression.slice(0,expression.length-1);
+      outputDiv.innerText=calculate(evaluate);
   }
+  if (lastCharacter === "C") {
+      outputDiv.innerText = "";
+  }
+
+
 
 
 }
