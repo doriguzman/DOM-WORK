@@ -25,27 +25,42 @@ function calculate(mathExp) {
 document.addEventListener('DOMContentLoaded', function () {
   outputDiv = document.getElementById('output');
 
-  document.addEventListener('click', function(event) {
+  document.addEventListener('click', function (event) {
     var elementId = event.target.innerText;
     outputDiv.innerText += elementId;
     var expression = outputDiv.innerText;
-    var lastCharacter= expression[expression.length-1]
+    var lastCharacter = expression[expression.length - 1]
     //checking if the last element is equal sign 
     // console.log(elementId)
-  
-    if (lastCharacter === "=" ) {
-      var evaluate= expression.slice(0,expression.length-1);
-      outputDiv.innerText=calculate(evaluate);
-  }
-  if (lastCharacter === "C") {
+
+    if (lastCharacter === "=") {
+      var evaluate = expression.slice(0, expression.length - 1);
+      outputDiv.innerText = calculate(evaluate);
+    }
+    if (lastCharacter === "C") {
       outputDiv.innerText = "";
-  }
+    }
 
+    if (expression.includes('++') ||
+      expression.includes('--') ||
+      expression.includes('+*') ||
+      expression.includes('+/') ||
+      expression.includes('-+') ||
+      expression.includes('-/') ||
+      expression.includes('-*') ||
+      expression.includes('**') ||
+      expression.includes('//') ||
+      expression.includes('/*') ||
+      expression.includes('/-') ||
+      expression.includes('/+') ||
+      expression.includes('*/') ||
+      expression.includes('*-') ||
+      expression.includes('*+')
+    ) {
+      output.innerText = expression.slice(0, -1) + ""
+    }
 
-
-
-}
-)
+  })
 })
 
 
