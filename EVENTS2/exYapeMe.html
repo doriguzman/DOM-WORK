@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Pokemon Lists</title>
+</head>
+
+<body>
+    <h1>Pokemon</h1>
+    <ul>
+        <li> Charmelon</li>
+        <li> Squirtle</li>
+        <li> Charizard</li>
+    </ul>
+</body>
+<script> 
+var list= document.querySelector('ul')
+document.addEventListener('click', function(event){
+    if (event.target.tagName.toUpperCase()==='LI'){
+       var newNew= document.createElement('li')
+        newNew.innerHTML=event.target.innerHTML
+        list.appendChild(newNew)
+        
+    }
+})
+
+
+
+</script>
+
+
+</html>
